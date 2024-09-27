@@ -1,7 +1,0 @@
-import React from 'react';
-
-const Navbar = () => {
-  return <div className="fixed w-full h-[120px] flex justify-between px-4 bg-[#0a192f] "></div>;
-};
-
-export default Navbar;
