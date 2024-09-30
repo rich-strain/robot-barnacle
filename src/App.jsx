@@ -1,13 +1,15 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-//import './App.css';
-import SimpleNav from './components/SimpleNav';
+import { Outlet } from 'react-router-dom';
+import NavigationBar from './components/NavigationBar';
 
 function App() {
   return (
     <>
-      <SimpleNav />
+      <NavigationBar />
+      <Outlet />
+      {/* <Header /> */}
+      {/* Container From Material-Tailwind For <Outlet /> */}
+      {/* End Container */}
+      {/* Footer */}
     </>
   );
 }

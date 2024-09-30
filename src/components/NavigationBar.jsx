@@ -1,35 +1,41 @@
 import React from 'react';
 import { Navbar, Collapse, Typography, IconButton } from '@material-tailwind/react';
+import { Link } from 'react-router-dom';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 function NavList() {
   return (
-    <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+    <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 p">
       <Typography as="li" variant="small" color="blue-gray" className="p-1 font-medium">
-        <a href="#" className="flex items-center hover:text-blue-500 transition-colors">
-          Pages
-        </a>
+        <Link key={1} to="/">
+          Home
+        </Link>
       </Typography>
       <Typography as="li" variant="small" color="blue-gray" className="p-1 font-medium">
-        <a href="#" className="flex items-center hover:text-blue-500 transition-colors">
-          Account
-        </a>
+        <Link key={2} to="/about">
+          About
+        </Link>
       </Typography>
       <Typography as="li" variant="small" color="blue-gray" className="p-1 font-medium">
-        <a href="#" className="flex items-center hover:text-blue-500 transition-colors">
-          Blocks
-        </a>
+        <Link key={3} to="/portfolio">
+          Portfolio
+        </Link>
       </Typography>
       <Typography as="li" variant="small" color="blue-gray" className="p-1 font-medium">
-        <a href="#" className="flex items-center hover:text-blue-500 transition-colors">
-          Docs
-        </a>
+        <Link key={4} to="/contact">
+          Contact
+        </Link>
+      </Typography>
+      <Typography as="li" variant="small" color="blue-gray" className="p-1 font-medium">
+        <Link key={5} to="/resume">
+          Resume
+        </Link>
       </Typography>
     </ul>
   );
 }
 
-export function NavbarSimple() {
+function NavigationBar() {
   const [openNav, setOpenNav] = React.useState(false);
 
   const handleWindowResize = () => window.innerWidth >= 960 && setOpenNav(false);
@@ -43,10 +49,11 @@ export function NavbarSimple() {
   }, []);
 
   return (
-    <Navbar className="mx-auto max-w-screen-xl px-6 py-3">
+    // <Navbar className="mx-auto max-w-screen-xl px-6 py-3">
+    <Navbar fullWidth className="border-0 sticky top-0 z-50">
       <div className="flex items-center justify-between text-blue-gray-900">
         <Typography as="a" href="#" variant="h6" className="mr-4 cursor-pointer py-1.5">
-          Material Tailwind
+          RS Portfolio
         </Typography>
         <div className="hidden lg:block">
           <NavList />
@@ -66,4 +73,4 @@ export function NavbarSimple() {
     </Navbar>
   );
 }
-export default NavbarSimple;
+export default NavigationBar;
