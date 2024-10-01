@@ -1,8 +1,10 @@
 import { Input, Button, Typography } from '@material-tailwind/react';
 import headShot from '../assets/portfolioHeadShot.jpg';
-import { DiCss3Full, DiGithubBadge, DiHtml5, DiJavascript, DiMongodb, DiMysql, DiNodejs, DiReact } from 'react-icons/di';
+import Skills from '../components/Skills';
+import { useState } from 'react';
 
 const Home = () => {
+  const [email, setEmail] = useState('');
   return (
     <>
       <header className="bg-white p-8">
@@ -20,7 +22,7 @@ const Home = () => {
                 Your email
               </Typography>
               <div className="mb-2 flex w-full flex-col gap-4 md:w-10/12 md:flex-row">
-                <Input color="gray" label="Enter your email" size="lg" />
+                <Input color="gray" label="Enter your email" size="lg" value={email} onChange={(e) => setEmail(e.target.value)} />
                 <Button color="gray" className="w-full px-4 md:w-[12rem]">
                   Contact Me
                 </Button>
@@ -30,25 +32,7 @@ const Home = () => {
           <img width={1024} height={1024} alt="team work" src={headShot} className="rounded-xl" />
         </div>
       </header>
-      <section className="px-8 py-28">
-        <div className="container mx-auto text-center">
-          <Typography variant="h6" color="blue-gray" className="mb-8">
-            Coding Skills
-          </Typography>
-          <div className="flex flex-wrap items-center justify-center gap-6">
-            <div className="flex items-center gap-2">
-              <DiGithubBadge size="4rem" />
-              <DiHtml5 size="4rem" />
-              <DiCss3Full size="4rem" />
-              <DiJavascript size="4rem" />
-              <DiMongodb size="4rem" />
-              <DiMysql size="4rem" />
-              <DiNodejs size="4rem" />
-              <DiReact size="4rem" />
-            </div>
-          </div>
-        </div>
-      </section>
+      <Skills />
     </>
   );
 };

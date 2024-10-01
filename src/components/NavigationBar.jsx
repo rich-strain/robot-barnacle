@@ -2,21 +2,17 @@ import React from 'react';
 import { Navbar, Collapse, Typography, IconButton } from '@material-tailwind/react';
 import { Link } from 'react-router-dom';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { SiCoderwall } from 'react-icons/si';
 
 function NavList() {
   return (
     <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 p">
-      <Typography as="li" variant="small" color="blue-gray" className="p-1 font-medium">
-        <Link key={1} to="/">
-          Home
-        </Link>
-      </Typography>
-      <Typography as="li" variant="small" color="blue-gray" className="p-1 font-medium">
+      <Typography as="li" variant="small" className="p-1 font-medium">
         <Link key={2} to="/about">
           About
         </Link>
       </Typography>
-      <Typography as="li" variant="small" color="blue-gray" className="p-1 font-medium">
+      <Typography as="li" variant="small" className="p-1 font-medium">
         <Link key={3} to="/portfolio">
           Portfolio
         </Link>
@@ -52,8 +48,8 @@ function NavigationBar() {
     // <Navbar className="mx-auto max-w-screen-xl px-6 py-3">
     <Navbar fullWidth className="border-0 sticky top-0 z-50">
       <div className="flex items-center justify-between text-blue-gray-900">
-        <Typography as="a" href="#" variant="h6" className="mr-4 cursor-pointer py-1.5">
-          RS Portfolio
+        <Typography as="a" href="/" variant="h6" className="mr-4 cursor-pointer py-1.5">
+          <SiCoderwall size="2rem" />
         </Typography>
         <div className="hidden lg:block">
           <NavList />
