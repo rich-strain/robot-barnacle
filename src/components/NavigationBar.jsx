@@ -7,22 +7,22 @@ import { SiCoderwall } from 'react-icons/si';
 function NavList() {
   return (
     <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 p">
-      <Typography as="li" variant="small" className="p-1 font-medium">
+      <Typography as="li" variant="small" className="p-1 font-medium text-gray-50">
         <Link key={2} to="/about">
           About
         </Link>
       </Typography>
-      <Typography as="li" variant="small" className="p-1 font-medium">
+      <Typography as="li" variant="small" className="p-1 font-medium text-gray-50">
         <Link key={3} to="/portfolio">
           Portfolio
         </Link>
       </Typography>
-      <Typography as="li" variant="small" className="p-1 font-medium">
+      <Typography as="li" variant="small" className="p-1 font-medium text-gray-50">
         <Link key={4} to="/contact">
           Contact
         </Link>
       </Typography>
-      <Typography as="li" variant="small" className="p-1 font-medium">
+      <Typography as="li" variant="small" className="p-1 font-medium text-gray-50">
         <Link key={5} to="/resume">
           Resume
         </Link>
@@ -47,9 +47,9 @@ function NavigationBar() {
   return (
     // <Navbar className="mx-auto max-w-screen-xl px-6 py-3">
     <Navbar fullWidth className="border-0 sticky top-0 z-50 bg-gray-900">
-      <div className="flex items-center justify-between text-blue-gray-900">
+      <div className="flex items-center justify-between">
         <Typography as="a" href="/" variant="h6" className="mr-4 cursor-pointer py-1.5">
-          <SiCoderwall size="1.5rem" />
+          <SiCoderwall size="1.5rem" color="#fafafa" />
         </Typography>
         <div className="hidden lg:block">
           <NavList />
