@@ -1,6 +1,6 @@
 import { Typography } from '@material-tailwind/react';
 import { DiCss3Full, DiGithubBadge, DiHtml5, DiJavascript, DiMongodb, DiMysql, DiNodejs, DiReact } from 'react-icons/di';
-const iconColor = '#334155';
+const iconColor = '#424242';
 
 const Skills = () => {
   return (
@@ -11,7 +11,7 @@ const Skills = () => {
         </Typography>
         <div className="flex flex-wrap items-center justify-center gap-6">
           <div className="flex items-center gap-2">
-            <DiGithubBadge color="#475569" size="4rem" />
+            <DiGithubBadge color={iconColor} size="4rem" variant="gradient" />
             <DiHtml5 color={iconColor} size="4rem" />
             <DiCss3Full color={iconColor} size="4rem" />
             <DiJavascript color={iconColor} size="4rem" />

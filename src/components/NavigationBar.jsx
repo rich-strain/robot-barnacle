@@ -17,12 +17,12 @@ function NavList() {
           Portfolio
         </Link>
       </Typography>
-      <Typography as="li" variant="small" color="blue-gray" className="p-1 font-medium">
+      <Typography as="li" variant="small" className="p-1 font-medium">
         <Link key={4} to="/contact">
           Contact
         </Link>
       </Typography>
-      <Typography as="li" variant="small" color="blue-gray" className="p-1 font-medium">
+      <Typography as="li" variant="small" className="p-1 font-medium">
         <Link key={5} to="/resume">
           Resume
         </Link>
@@ -46,7 +46,7 @@ function NavigationBar() {
 
   return (
     // <Navbar className="mx-auto max-w-screen-xl px-6 py-3">
-    <Navbar fullWidth className="border-0 sticky top-0 z-50">
+    <Navbar fullWidth className="border-0 sticky top-0 z-50 bg-gray-900">
       <div className="flex items-center justify-between text-blue-gray-900">
         <Typography as="a" href="/" variant="h6" className="mr-4 cursor-pointer py-1.5">
           <SiCoderwall size="1.5rem" />

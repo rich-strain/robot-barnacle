@@ -22,6 +22,16 @@ const PROJECTS = [
     title: 'X Clone',
     desc: "A content mangagement style clone of X where developers can publish their posts and comment on each other's posts as well.",
   },
+  {
+    img: '/image/xClone.png',
+    title: 'X Clone',
+    desc: "A content mangagement style clone of X where developers can publish their posts and comment on each other's posts as well.",
+  },
+  {
+    img: '/image/xClone.png',
+    title: 'X Clone',
+    desc: "A content mangagement style clone of X where developers can publish their posts and comment on each other's posts as well.",
+  },
 ];
 
 function Portfolio() {
@@ -31,12 +41,11 @@ function Portfolio() {
         <Typography variant="h2" color="blue-gray" className="mb-4">
           My Portfolio
         </Typography>
-        <Typography variant="lead" className="mx-auto w-full px-4 font-normal !text-gray-500 lg:w-7/12">
-          Whether you have a mobile app idea that needs to come to life or a website that requires a facelift, I&apos;m here to turn your digital dreams into
-          reality.
+        <Typography variant="lead" className="mx-auto w-full px-4 font-normal !text-gray-500 lg:w-6/12">
+          Whether you&apos;re envisioning a new mobile app or looking to revamp your website, I am here to bring your digital ambitions to life.
         </Typography>
       </div>
-      <div className="container mx-auto grid grid-cols-1 gap-x-10 gap-y-20 md:grid-cols-2 xl:grid-cols-4">
+      <div className="container mx-auto grid grid-cols-1 gap-x-10 gap-y-20 md:grid-cols-2 xl:grid-cols-3">
         {PROJECTS.map((props, idx) => (
           <Project key={idx} {...props} />
         ))}
