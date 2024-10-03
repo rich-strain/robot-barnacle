@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import NavigationBar from './components/NavigationBar';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
       {/* <Header /> */}
       {/* Container From Material-Tailwind For <Outlet /> */}
       {/* End Container */}
-      {/* Footer */}
+      <Footer />
     </>
   );
 }
