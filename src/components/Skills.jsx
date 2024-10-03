@@ -1,6 +1,6 @@
 import { Typography } from '@material-tailwind/react';
 import { DiCss3Full, DiGithubBadge, DiHtml5, DiJavascript, DiMongodb, DiMysql, DiNodejs, DiReact } from 'react-icons/di';
-const iconColor = '#424242';
+const iconColor = '#25334d';
 
 const Skills = () => {
   return (
