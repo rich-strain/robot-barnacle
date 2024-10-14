@@ -1,12 +1,12 @@
 import { Card, CardHeader, CardBody, Typography, IconButton } from '@material-tailwind/react';
 import PropTypes from 'prop-types';
 
-export function ResumeInfoCard({ icon: Icon, title, date, children }) {
+export function ResumeInfoCard({ icon: Icon, title }) {
   return (
     <Card>
       <CardHeader className="flex items-center justify-between rounded-none overflow-visible" floated={false} shadow={false}>
         <div className="flex flex-col gap-1 w-full">
-          <Typography color="blue-gray" variant="h5" className="w-full">
+          <Typography variant="h5" className="w-full text-gray-500">
             {title}
           </Typography>
         </div>
@@ -22,8 +22,7 @@ export function ResumeInfoCard({ icon: Icon, title, date, children }) {
 ResumeInfoCard.propTypes = {
   icon: PropTypes.elementType.isRequired,
   title: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
+  //children: PropTypes.node.isRequired,
 };
 
 export default ResumeInfoCard;

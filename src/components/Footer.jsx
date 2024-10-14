@@ -1,8 +1,14 @@
+// Import Tailwind CSS Components
 import { Typography } from '@material-tailwind/react';
+// Import React Router
 import { Link } from 'react-router-dom';
+// Import React Icons
+import { FaXTwitter, FaLinkedinIn, FaGithub } from 'react-icons/fa6';
 
-const LINKS = ['About', 'Portfolio', 'Contact', 'Resume'];
+// Set Misc Variables
+const footerIconColor = '#25334d';
 const CURRENT_YEAR = new Date().getFullYear();
+//const LINKS = ['About', 'Portfolio', 'Contact', 'Resume'];
 
 export function Footer() {
   return (
@@ -16,13 +22,21 @@ export function Footer() {
             </span>
           </Typography>
           <ul className="flex gap-8 items-center">
-            {LINKS.map((link) => (
-              <li key={link}>
-                <Typography as="a" href="#" variant="small" className="font-normal text-gray-700 hover:text-gray-900 transition-colors">
-                  <Link to={link}>{link}</Link>
-                </Typography>
-              </li>
-            ))}
+            <li>
+              <Link to="">
+                <FaLinkedinIn className="h-5 w-5" color={footerIconColor} />
+              </Link>
+            </li>
+            <li>
+              <Link to="">
+                <FaXTwitter className="h-5 w-5" color={footerIconColor} />
+              </Link>
+            </li>
+            <li>
+              <Link to="">
+                <FaGithub className="h-5 w-5" color={footerIconColor} />
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

@@ -32,12 +32,6 @@ const EXPERIENCE = [
     date: '2017 - 2021',
     children: 'Revamped the automated test framework for web services, resulting in a remarkable 90% reduction in debugging and issue resolution time.',
   },
-  {
-    icon: BriefcaseIcon,
-    title: 'Junior Web Developer',
-    date: '2015 - 2017',
-    children: 'Developed 10+ responsive websites for clients in a variety of industries.',
-  },
 ];
 
 const FRONTEND = [
@@ -81,14 +75,12 @@ export function InformationSection() {
           </div>
         </div>
       </div>
-      <section>
-        <Skills />
-      </section>
+
       <section className="pb-28 px-8">
         <div className="grid xl:grid-cols-2 md:grid-cols-1 container gap-20 mx-auto items-start pt-[120px]">
           <div>
             <div className="mb-10">
-              <Typography color="blue-gray" className="mb-2 text-3xl font-bold text-center">
+              <Typography c className="mb-2 text-3xl font-bold text-center">
                 Front-end Proficiencies
               </Typography>
             </div>
@@ -111,6 +103,9 @@ export function InformationSection() {
             </div>
           </div>
         </div>
+      </section>
+      <section>
+        <Skills />
       </section>
     </>
   );

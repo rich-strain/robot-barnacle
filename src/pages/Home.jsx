@@ -1,10 +1,23 @@
-import { Input, Button, Typography } from '@material-tailwind/react';
-import headShot from '../assets/portfolioHeadShot.jpg';
-import Skills from '../components/Skills';
+// Import React Components
+import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
+// Import Tailwind CSS Components
+import { Input, Button, Typography } from '@material-tailwind/react';
+import headShot from '../assets/portfolioHeadShot.jpg';
+
 const Home = () => {
+  // React Hooks
   const [email, setEmail] = useState('');
+  const navigate = useNavigate();
+
+  // Navigate to Contact Form Pushing Email as Prop
+  const sendEmail = () => {
+    console.log(email);
+    navigate('/contact', { state: { email } });
+  };
+
+  //HTML RETURN
   return (
     <>
       <header className="bg-white p-8">
@@ -23,7 +36,7 @@ const Home = () => {
               </Typography>
               <div className="mb-2 flex w-full flex-col gap-4 md:w-10/12 md:flex-row">
                 <Input color="gray" label="Enter your email" size="lg" value={email} onChange={(e) => setEmail(e.target.value)} />
-                <Button color="gray" className="w-full px-4 md:w-[12rem]">
+                <Button color="gray" className="w-full px-4 md:w-[12rem]" onClick={() => sendEmail()}>
                   Contact Me
                 </Button>
               </div>
@@ -32,7 +45,6 @@ const Home = () => {
           <img width={1024} height={1024} alt="team work" src={headShot} className="rounded-xl" />
         </div>
       </header>
-      <Skills />
     </>
   );
 };
