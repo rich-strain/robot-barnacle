@@ -4,7 +4,6 @@ import { useState } from 'react';
 
 // Import Tailwind CSS Components
 import { Input, Button, Typography } from '@material-tailwind/react';
-import headShot from '../assets/portfolioHeadShot.jpg';
 
 const Home = () => {
   // React Hooks
@@ -42,7 +41,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <img width={1024} height={1024} alt="team work" src={headShot} className="rounded-xl" />
+          <img width={1024} height={1024} alt="team work" src="/image/portfolioHeadshot.jpg" className="rounded-xl" />
         </div>
       </header>
     </>
