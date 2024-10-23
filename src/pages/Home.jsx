@@ -29,7 +29,7 @@ const Home = () => {
               I&apos;m Rich Strain, a passionate web developer based along Florida&apos;s Treasure Coast. Here, you&apos;ll get a glimpse of my journey in the
               world of web development, where creativity meets functionality.
             </Typography>
-            <div className="grid">
+            {/* <div className="grid">
               <Typography variant="small" className="mb-2 text-gray-900 font-medium">
                 Your email
               </Typography>
@@ -39,7 +39,7 @@ const Home = () => {
                   Contact Me
                 </Button>
               </div>
-            </div>
+            </div> */}
           </div>
           <img width={1024} height={1024} alt="team work" src="/image/portfolioHeadshot.jpg" className="rounded-xl" />
         </div>

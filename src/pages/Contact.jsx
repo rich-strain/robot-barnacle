@@ -1,49 +1,44 @@
 // Import React Components
-// import { useLocation } from 'react-router-dom';
-import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 // Import Tailwind CSS Components
-import { Typography, Card, CardBody, Radio, Input, Textarea, Button, IconButton } from '@material-tailwind/react';
+import { Typography, Card, CardBody, Radio, Input, Textarea, Button, IconButton, Alert } from '@material-tailwind/react';
 import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/solid';
 
+// Import utility functions
+import { validateEmail, handleEmailChange } from '../utils';
+import { handleFirstNameChange, handleLastNameChange, handleFormSubmit, handleCommentChange } from '../utils';
+
 export function Contact() {
-  // React Hooks
+  // Set Form States
+  const [email, setEmail] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [contactMessage, setMessage] = useState('');
 
-  //const [email, setEmail] = useState('');
-  // const location = useLocation();
-  const passedEmail = location.state?.email;
-  if (passedEmail) {
-    setEmail(passedEmail);
-    console.log(`Email: `, { passedEmail });
-  }
+  // Set Form Error States
+  const [error, setError] = useState(false);
+  const [firstError, setFirstError] = useState(false);
+  const [lastError, setLastError] = useState(false);
+  const [messageError, setMessageError] = useState(false);
 
-  // const [firstName, setFirstName] = useState('');
-  // const [lastName, setLastName] = useState('');
-  // const [contactMessage, setMessage] = useState('');
-
-  // const handleInputChange = (e) => {
-  //   // Getting the value and name of the input which triggered the change
-  //   const { target } = e;
-  //   const inputType = target.name;
-  //   const inputValue = target.value;
-
-  //   // Based on the input type, we set the state of either email, username, and password
-  //   if (inputType === 'email') {
-  //     setEmail(inputValue);
-  //   } else if (inputType === 'first-name') {
-  //     setFirstName(inputValue);
-  //   } else if (inputType === 'last-name') {
-  //     setLastName(inputValue);
-  //   } else {
-  //     setMessage(inputValue);
-  //   }
-  // };
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   console.log('Form Submitted');
-  // };
-
+  // Define handleEmailChange to pass additional arguments
+  const emailChange = (e) => {
+    handleEmailChange(e, setEmail, setError, validateEmail);
+  };
+  const firstNameChange = (e) => {
+    handleFirstNameChange(e, setFirstName, setFirstError);
+  };
+  const lastNameChange = (e) => {
+    handleLastNameChange(e, setLastName, setLastError);
+  };
+  const commentChange = (e) => {
+    handleCommentChange(e, setMessage, setMessageError);
+  };
+  const submitForm = (e) => {
+    handleFormSubmit(e, email, firstName, lastName, contactMessage, error, setError, setFirstError, setLastError, setMessageError);
+  };
   return (
     <section className="px-8 py-16">
       <div>
@@ -54,7 +49,7 @@ export function Contact() {
                 Contact Information
               </Typography>
               <Typography variant="lead" className="mx-auto mb-8 text-base !text-gray-500">
-                Fill out the form and I will get back to you within 24 business hours.
+                Please fill out the form provided and I will get back to you within 24 business hours.
               </Typography>
               <div className="flex gap-5">
                 <PhoneIcon className="h-6 w-6 text-white" />
@@ -87,13 +82,36 @@ export function Contact() {
                     color="gray"
                     size="lg"
                     variant="static"
+                    label="Email"
+                    value={email}
+                    name="email"
+                    placeholder="ex. john@gmail.com"
+                    containerProps={{
+                      className: '!min-w-full mb-8',
+                    }}
+                    onChange={emailChange}
+                    error={error}
+                    onBlur={emailChange}
+                  />
+                  <Input
+                    color="gray"
+                    size="lg"
+                    variant="static"
                     label="First Name"
                     name="first-name"
-                    // value={firstName}
-                    placeholder="eg. Edward"
+                    value={firstName}
+                    placeholder="ex. John"
                     containerProps={{
                       className: '!min-w-full mb-3 md:mb-0',
                     }}
+                    onChange={(e) => {
+                      setFirstName(e.target.value);
+                      if (e.target.value != '') {
+                        setFirstError(false);
+                      }
+                    }}
+                    onBlur={firstNameChange}
+                    error={firstError}
                   />
                   <Input
                     color="gray"
@@ -101,32 +119,27 @@ export function Contact() {
                     variant="static"
                     label="Last Name"
                     name="last-name"
-                    // value={lastName}
-                    placeholder="eg. VanHalen"
+                    value={lastName}
+                    placeholder="ex. Doe"
                     containerProps={{
                       className: '!min-w-full',
                     }}
+                    onChange={(e) => {
+                      setLastName(e.target.value);
+                      if (e.target.value != '') {
+                        setLastError(false);
+                      }
+                    }}
+                    onBlur={lastNameChange}
+                    error={lastError}
                   />
                 </div>
-                <Input
-                  color="gray"
-                  size="lg"
-                  variant="static"
-                  label="Email"
-                  //value={email}
-                  name="email"
-                  placeholder="eg. eddy@vanhalen.com"
-                  containerProps={{
-                    className: '!min-w-full mb-8',
-                  }}
-                />
                 <Typography variant="lead" className="!text-blue-gray-500 text-sm mb-2">
-                  What are you interested on?
+                  What are you interested in?
                 </Typography>
                 <div className="-ml-3 mb-14 ">
                   <Radio color="gray" name="type" label="Design" defaultChecked />
                   <Radio color="gray" name="type" label="Development" />
-                  <Radio color="gray" name="type" label="Support" />
                   <Radio color="gray" name="type" label="Other" />
                 </div>
                 <Textarea
@@ -135,13 +148,17 @@ export function Contact() {
                   variant="static"
                   label="Your Message"
                   name="message"
+                  value={contactMessage}
                   // value={contactMessage}
                   containerProps={{
                     className: '!min-w-full mb-8',
                   }}
+                  onChange={commentChange}
+                  error={messageError}
+                  onBlur={commentChange}
                 />
                 <div className="w-full flex justify-end">
-                  <Button className="w-full md:w-fit bg-midnightBlue" size="md">
+                  <Button className="w-full md:w-fit bg-midnightBlue" size="md" onClick={submitForm}>
                     Send message
                   </Button>
                 </div>

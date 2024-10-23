@@ -5,7 +5,7 @@ const PROJECTS = [
   {
     img: '/image/mixIt.svg',
     title: 'Mix-It',
-    desc: 'An app to allow users to search for cocktail beverages by name, and display information about the beverage such as its recipe, ingredients.',
+    desc: 'An app that allows users to search for cocktail beverages by name, and display information about the beverage such as its recipe, ingredients.',
   },
   {
     img: '/image/openWeather.png',
@@ -18,14 +18,14 @@ const PROJECTS = [
     desc: 'A travel diary or blog based on an Express.js API back end that utilizes Sequalize to interact with the PosgresSQL database.',
   },
   {
-    img: '/image/xClone.png',
-    title: 'X Clone',
-    desc: "A content mangagement style clone of X where developers can publish their posts and comment on each other's posts as well.",
+    img: '/image/cssCheatsheet.png',
+    title: 'CSS Cheatsheet',
+    desc: 'A simple HTML page that can be used to reference code snippets for some of the most common CSS layouts a developer might use.',
   },
   {
-    img: '/image/xClone.png',
-    title: 'X Clone',
-    desc: "A content mangagement style clone of X where developers can publish their posts and comment on each other's posts as well.",
+    img: '/image/dailyNotes.png',
+    title: 'Daily Task List',
+    desc: 'A simple task list created with node and express. The app utilizes express for navigation and API routing and Nodemon for automatic rebooting of the server.',
   },
   {
     img: '/image/xClone.png',

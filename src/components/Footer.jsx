@@ -23,17 +23,17 @@ export function Footer() {
           </Typography>
           <ul className="flex gap-8 items-center">
             <li>
-              <Link to="">
+              <Link to="http://linkedin.com">
                 <FaLinkedinIn className="h-5 w-5" color={footerIconColor} />
               </Link>
             </li>
             <li>
-              <Link to="">
+              <Link to="http://twitter.com">
                 <FaXTwitter className="h-5 w-5" color={footerIconColor} />
               </Link>
             </li>
             <li>
-              <Link to="">
+              <Link to="http://github.com/rich-strain">
                 <FaGithub className="h-5 w-5" color={footerIconColor} />
               </Link>
             </li>
