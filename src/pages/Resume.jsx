@@ -12,25 +12,31 @@ const resumeDownload = () => {
   window.open('/assets/resume.pdf', '_blank');
 };
 
-const EXPERIENCE = [
+const BACKEND = [
   {
-    icon: BriefcaseIcon,
-    title: 'Freelancer Web Developer',
+    icon: FireIcon,
+    title: 'Node/Express.js',
     date: '2023 - PRESENT',
     children:
-      "The core of my work involved actual web development. I would write code, design layouts, and create functionality based on the project's specifications.",
+      'Competent in developing server-side applications using Node.js and Express.js. Proficient in creating RESTful APIs and integrating third-party services to enhance application functionality.',
   },
   {
-    icon: BriefcaseIcon,
-    title: 'Technical Team Lead',
-    date: '2021 - 2023',
-    children: 'I provided strong leadership by overseeing and guiding a team of highly skilled technical professionals.',
-  },
-  {
-    icon: BriefcaseIcon,
-    title: 'Senior Web Developer',
+    icon: FireIcon,
+    title: 'MySQL/Sequelize',
     date: '2017 - 2021',
-    children: 'Revamped the automated test framework for web services, resulting in a remarkable 90% reduction in debugging and issue resolution time.',
+    children:
+      'Experienced in designing and managing relational databases using MySQL. Proficient in writing complex queries and using Sequelize ORM to interact with databases.',
+  },
+  {
+    icon: FireIcon,
+    title: 'MongoDB/Mongoose',
+    children: 'Experienced in designing and managing NoSQL databases using MongoDB. Proficient in creating schemas, models, and queries using Mongoose ODM.',
+  },
+  {
+    icon: FireIcon,
+    title: 'GraphQL/Apollo',
+    children:
+      'Proficient in using GraphQL to create efficient and flexible APIs. Proficient in implementing GraphQL queries, mutations, and subscriptions using Apollo Client and Server.',
   },
 ];
 
@@ -60,12 +66,15 @@ export function InformationSection() {
       <div className="relative w-full">
         <div className="grid place-items-center min-h-[52vh] px-8">
           <div className="container mx-auto grid place-items-center h-max text-center">
-            <Typography variant="h1" color="blue-gray">
+            {/* <Typography variant="h1" color="blue-gray">
               My Resume
-            </Typography>
-            <Typography variant="lead" color="gray" className="mt-4 mb-12 w-full md:max-w-full lg:max-w-4xl">
+            </Typography> */}
+            <section>
+              <Skills />
+            </section>
+            {/* <Typography variant="lead" color="gray" className="mt-4 mb-12 w-full md:max-w-full lg:max-w-4xl">
               Welcome to my professional resume page! Below, you&apos;ll find a <br /> comprehensive overview of my front-end and back-end proficiencies.
-            </Typography>
+            </Typography> */}
             <Typography className="mt-12 mb-4 text-blue-gray-900 font-medium uppercase">Download My Resume:</Typography>
             <div className="gap-2 lg:flex">
               <IconButton variant="text" color="gray" onClick={() => resumeDownload()}>
@@ -80,9 +89,7 @@ export function InformationSection() {
         <div className="grid xl:grid-cols-2 md:grid-cols-1 container gap-20 mx-auto items-start pt-[120px]">
           <div>
             <div className="mb-10">
-              <Typography c className="mb-2 text-3xl font-bold text-center">
-                Front-end Proficiencies
-              </Typography>
+              <Typography className="mb-2 text-3xl font-bold text-center">Front-end Proficiencies</Typography>
             </div>
             <div className="container mx-auto grid grid-cols-1 gap-16 gap-y-12">
               {FRONTEND.map((props, idx) => (
@@ -97,16 +104,16 @@ export function InformationSection() {
               </Typography>
             </div>
             <div className="container mx-auto grid grid-cols-1 gap-16 gap-y-12">
-              {EXPERIENCE.map((props, idx) => (
+              {BACKEND.map((props, idx) => (
                 <ProficiencyCard key={idx} {...props} />
               ))}
             </div>
           </div>
         </div>
       </section>
-      <section>
+      {/* <section>
         <Skills />
-      </section>
+      </section> */}
     </>
   );
 }

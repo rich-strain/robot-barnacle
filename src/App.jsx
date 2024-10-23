@@ -1,11 +1,11 @@
 import { Outlet } from 'react-router-dom';
-import NavigationBar from './components/NavigationBar';
+import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 
 function App() {
   return (
     <>
-      <NavigationBar />
+      <Navigation />
       <Outlet />
       {/* <Header /> */}
       {/* Container From Material-Tailwind For <Outlet /> */}
