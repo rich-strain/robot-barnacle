@@ -4,7 +4,7 @@ import { DiGithubBadge } from 'react-icons/di';
 // import { BiLink } from 'react-icons/bi';
 import { PiLinkFill } from 'react-icons/pi';
 
-export function Project({ img, title, desc, deploy_url, repo_url }) {
+export function Project({ img, title, desc, gitUrl, deployUrl }) {
   return (
     <Card color="transparent" shadow={false}>
       <CardHeader floated={false} className="mx-0 mt-0 mb-6 h-48">
@@ -28,12 +28,12 @@ export function Project({ img, title, desc, deploy_url, repo_url }) {
       </CardFooter> */}
       <CardFooter className="flex flex-justify-center gap-6">
         <Tooltip content="Preview App">
-          <Typography as="a" href={deploy_url} variant="lead" textGradient>
+          <Typography as="a" href={deployUrl} variant="lead" textGradient>
             <PiLinkFill color="#475569" size="2.5rem" />
           </Typography>
         </Tooltip>
         <Tooltip content="GitHub Repo">
-          <Typography as="a" href={repo_url} variant="lead" textGradient>
+          <Typography as="a" href={gitUrl} variant="lead" textGradient>
             <DiGithubBadge color="#475569" size="2.5rem" />
           </Typography>
         </Tooltip>
@@ -47,5 +47,7 @@ Project.propTypes = {
   img: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
+  gitUrl: PropTypes.string.isRequired,
+  deployUrl: PropTypes.string,
 };
 export default Project;
