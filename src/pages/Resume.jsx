@@ -1,5 +1,5 @@
 import { IconButton, Typography } from '@material-tailwind/react';
-import { BriefcaseIcon, FireIcon } from '@heroicons/react/24/solid';
+import { FireIcon } from '@heroicons/react/24/solid';
 import { PiDownloadSimple } from 'react-icons/pi';
 import Skills from '../components/Skills';
 

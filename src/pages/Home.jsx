@@ -1,19 +1,38 @@
 // Import React Components
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { validateEmail, handleEmailChange } from '../utils';
 
 // Import Tailwind CSS Components
 import { Input, Button, Typography } from '@material-tailwind/react';
 
 const Home = () => {
-  // React Hooks
+  //  React States/Hooks
+  const [error, setError] = useState(false);
   const [email, setEmail] = useState('');
   const navigate = useNavigate();
+
+  // validate email field
+  const emailChange = (e) => {
+    handleEmailChange(e, setEmail, setError, validateEmail);
+  };
+  // Navigate to Contact Form Pushing Email as Prop
+  // const passEmail = () => {
+  //   console.log('Email to pass: ', email);
+  //   console.log('Passing Email to Contact Form');
+  //   navigate('/contact', { state: { email } });
+  // };
 
   // Navigate to Contact Form Pushing Email as Prop
   const sendEmail = () => {
     console.log(email);
-    navigate('/contact', { state: { email } });
+
+    if (error) {
+      console.log('Invalid Email Provided');
+    } else {
+      navigate('/contact', { state: { email } });
+    }
+    return;
   };
 
   //HTML RETURN
@@ -34,8 +53,8 @@ const Home = () => {
                 Your email
               </Typography>
               <div className="mb-2 flex w-full flex-col gap-4 md:w-10/12 md:flex-row">
-                <Input color="gray" label="Enter your email" size="lg" value={email} onChange={(e) => setEmail(e.target.value)} />
-                <Button color="gray" className="w-full px-4 md:w-[12rem]" onClick={() => sendEmail()}>
+                <Input color="gray" label="Enter your email" size="lg" value={email} onChange={emailChange} error={error} />
+                <Button color="gray" className="w-full px-4 md:w-[12rem]" onClick={() => sendEmail()} disabled={error}>
                   Contact Me
                 </Button>
               </div>

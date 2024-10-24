@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 // Import Tailwind CSS Components
-import { Typography, Card, CardBody, Radio, Input, Textarea, Button, IconButton, Alert } from '@material-tailwind/react';
+import { Typography, Card, CardBody, Radio, Input, Textarea, Button, IconButton } from '@material-tailwind/react';
 import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/solid';
 
 // Import utility functions
@@ -16,6 +16,15 @@ export function Contact() {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [contactMessage, setMessage] = useState('');
+
+  const location = useLocation();
+  const emailParam = location.state?.email || '';
+
+  useEffect(() => {
+    if (emailParam) {
+      setEmail(emailParam);
+    }
+  }, [emailParam]);
 
   // Set Form Error States
   const [error, setError] = useState(false);
