@@ -27,7 +27,7 @@ const PROJECTS = [
     img: '/image/cssCheatsheet.png',
     title: 'CSS Cheatsheet',
     desc: 'A simple HTML page that can be used to reference code snippets for some of the most common CSS layouts a developer might use.',
-    deployUrl: 'https://css-cheat.richardstrain.com',
+    deployUrl: 'https://css.richardstrain.com',
     gitUrl: 'https://github.com/rich-strain/css-cheat',
   },
   {
