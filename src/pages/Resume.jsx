@@ -3,13 +3,10 @@ import { FireIcon } from '@heroicons/react/24/solid';
 import { PiDownloadSimple } from 'react-icons/pi';
 import Skills from '../components/Skills';
 
-// import { DiJqueryLogo, DiHtml5, DiCss3, DiResponsive, DiReact, DiBootstrap, DiNodejsSmall, DiMysql, DiMongodb } from 'react-icons/di';
-// import { FaHtml5 } from 'react-icons/fa6';
-// import { SiApollographql, SiGraphql } from 'react-icons/si';
 import ProficiencyCard from '../components/ProficiencyCard';
 
 const resumeDownload = () => {
-  window.open('/assets/resume.pdf', '_blank');
+  window.open('#', '_blank');
 };
 
 const BACKEND = [

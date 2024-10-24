@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import { Card, CardHeader, CardBody, CardFooter, Typography, Tooltip } from '@material-tailwind/react';
 import { DiGithubBadge } from 'react-icons/di';
-// import { BiLink } from 'react-icons/bi';
+
 import { PiLinkFill } from 'react-icons/pi';
 
 export function Project({ img, title, desc, gitUrl, deployUrl }) {
@@ -42,12 +42,4 @@ export function Project({ img, title, desc, gitUrl, deployUrl }) {
   );
 }
 
-//Define Proptypes for Project
-Project.propTypes = {
-  img: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  desc: PropTypes.string.isRequired,
-  gitUrl: PropTypes.string.isRequired,
-  deployUrl: PropTypes.string,
-};
 export default Project;

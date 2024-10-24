@@ -47,7 +47,7 @@ function Navigation() {
 
   return (
     // <Navbar className="mx-auto max-w-screen-xl px-6 py-3">
-    <Navbar fullWidth className="border-0 sticky top-0 z-50 bg-dusk py-3">
+    <Navbar fullWidth className="border-0 sticky top-0 z-50 bg-dusk py-3 bg-opacity-100">
       <div className="flex items-center justify-between">
         <Typography variant="h6" className="mr-4 cursor-pointer-none py-1.5">
           {/* <GiTreasureMap size="2.5rem" color="#fafafa" /> */}
