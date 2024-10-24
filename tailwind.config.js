@@ -14,14 +14,3 @@ module.exports = withMT({
   },
   plugins: [],
 });
-
-// Basic Tailwind Configuration
-// /** @type {import('tailwindcss').Config} */
-
-// export default {
-//   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
-//   theme: {
-//     extend: {},
-//   },
-//   plugins: [],
-// };
