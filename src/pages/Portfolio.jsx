@@ -6,7 +6,7 @@ const PROJECTS = [
     img: '/image/wealthen-preview.png',
     title: 'Wealthen',
     desc: 'A financial wellness SaaS platform with three subscription tiers (Free / $2 / $7 per month). Users import bank CSVs — no account linking ever — and get spending categorization, a debt payoff engine (avalanche & snowball), subscription waste detection, budget alerts, a financial health score, and a net worth tracker. Stripe handles billing; a Premium tier unlocks an AI coach and life planning tools.',
-    deployUrl: 'https://wealthen.com',
+    deployUrl: 'https://wealthen.richardstrain.com',
     gitUrl: '',
     privateRepo: true,
     tags: ['Next.js', 'TypeScript', 'Stripe', 'Prisma', 'PostgreSQL', 'NextAuth'],
