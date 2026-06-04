@@ -10,11 +10,11 @@ function ComingSoonBadge() {
   );
 }
 
-export function Project({ img, title, desc, gitUrl, deployUrl, comingSoon, tags }) {
+export function Project({ img, title, desc, gitUrl, deployUrl, comingSoon, privateRepo, demoCredentials, tags }) {
   return (
     <article className="card card-hover group flex flex-col h-full p-0 overflow-hidden">
       {/* Image / Placeholder */}
-      <div className="h-48 overflow-hidden bg-elevated relative">
+      <div className="aspect-[2/1] overflow-hidden bg-elevated relative">
         {comingSoon ? (
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-elevated to-accent/10">
             <div className="w-16 h-16 rounded-2xl bg-accent/10 border border-accent/20 flex items-center justify-center mb-3">
@@ -42,6 +42,14 @@ export function Project({ img, title, desc, gitUrl, deployUrl, comingSoon, tags 
 
         <p className="text-text-secondary text-sm leading-relaxed mb-4 flex-1">{desc}</p>
 
+        {demoCredentials && (
+          <div className="flex flex-col gap-1 px-3 py-2.5 rounded-lg bg-elevated border border-border text-xs mb-4">
+            <p className="text-text-muted font-medium uppercase tracking-wide text-[10px] mb-0.5">Demo Credentials</p>
+            <p className="text-text-secondary"><span className="text-text-muted">user:</span> {demoCredentials.user}</p>
+            <p className="text-text-secondary"><span className="text-text-muted">pass:</span> {demoCredentials.pass}</p>
+          </div>
+        )}
+
         {tags && tags.length > 0 && (
           <div className="flex flex-wrap gap-1.5 mb-5">
             {tags.map((tag) => (
@@ -67,7 +75,7 @@ export function Project({ img, title, desc, gitUrl, deployUrl, comingSoon, tags 
             <span className="text-text-muted text-sm italic">Live link coming soon</span>
           ) : null}
 
-          {gitUrl && (
+          {gitUrl ? (
             <a
               href={gitUrl}
               target="_blank"
@@ -77,7 +85,12 @@ export function Project({ img, title, desc, gitUrl, deployUrl, comingSoon, tags 
               <FaGithub className="w-4 h-4" />
               Code
             </a>
-          )}
+          ) : privateRepo ? (
+            <span className="inline-flex items-center gap-1.5 text-text-muted text-sm ml-auto">
+              <FaGithub className="w-4 h-4" />
+              Private Repo
+            </span>
+          ) : null}
         </div>
       </div>
     </article>
