@@ -1,65 +1,83 @@
 import Project from '../components/Project';
-import { Typography } from '@material-tailwind/react';
 
 const PROJECTS = [
   {
     img: '/image/mixIt.svg',
     title: 'Mix-It',
-    desc: 'An app that allows users to search for cocktail beverages by name, and display information about the beverage such as its recipe, ingredients.',
+    desc: 'A cocktail search app that lets users find beverages by name and display recipe details, ingredients, and preparation instructions.',
     deployUrl: 'https://rich-strain.github.io/cocktail-search/',
     gitUrl: 'https://github.com/rich-strain/cocktail-search',
+    tags: ['JavaScript', 'REST API', 'CSS'],
   },
   {
     img: '/image/openWeather.png',
-    title: 'Open Weather ',
-    desc: 'A weather dashboard that allows a user to retrieve the current weather and the five day forecast based upon the city searched.',
+    title: 'Open Weather',
+    desc: 'A weather dashboard that retrieves current conditions and a five-day forecast based on city search, using the OpenWeather API.',
     deployUrl: '',
     gitUrl: 'https://github.com/rich-strain/open-weather',
+    tags: ['JavaScript', 'OpenWeather API', 'LocalStorage'],
   },
   {
     img: '/image/travelBlog.png',
     title: 'Travel Blog',
-    desc: 'A travel diary or blog based on an Express.js API back end that utilizes Sequalize to interact with the PosgresSQL database.',
+    desc: 'A full-stack travel diary built with Express.js and Sequelize ORM backed by a PostgreSQL database with session authentication.',
     deployUrl: 'https://travel-guide-9oc3.onrender.com',
     gitUrl: 'https://github.com/rich-strain/travel-guide',
-  },
-  {
-    img: '/image/cssCheatsheet.png',
-    title: 'CSS Cheatsheet',
-    desc: 'A simple HTML page that can be used to reference code snippets for some of the most common CSS layouts a developer might use.',
-    deployUrl: 'https://css.richardstrain.com',
-    gitUrl: 'https://github.com/rich-strain/css-cheat',
-  },
-  {
-    img: '/image/dailyNotes.png',
-    title: 'Daily Task List',
-    desc: 'A simple task list created with node and express. The app utilizes express for navigation and API routing and Nodemon for automatic rebooting of the server.',
-    deployUrl: 'https://expert-spoon.onrender.com',
-    gitUrl: 'https://github.com/rich-strain/expert-spoon',
+    tags: ['Node.js', 'Express', 'Sequelize', 'PostgreSQL'],
   },
   {
     img: '/image/xClone.png',
     title: 'X Clone',
-    desc: "A content mangagement style clone of X where developers can publish their posts and comment on each other's posts as well.",
+    desc: 'A content management style social platform where developers can publish posts and comment on each other — built with MERN stack.',
     deployUrl: 'https://crispy-dollup.onrender.com',
     gitUrl: 'https://github.com/rich-strain/crispy-dollop',
+    tags: ['React', 'Node.js', 'MongoDB', 'GraphQL'],
+  },
+  {
+    img: '/image/cssCheatsheet.png',
+    title: 'CSS Cheatsheet',
+    desc: 'A quick-reference HTML page covering the most common CSS layout patterns — Grid, Flexbox, positioning, and more.',
+    deployUrl: 'https://css.richardstrain.com',
+    gitUrl: 'https://github.com/rich-strain/css-cheat',
+    tags: ['HTML', 'CSS'],
+  },
+  {
+    img: '/image/dailyNotes.png',
+    title: 'Daily Task List',
+    desc: 'A simple Node/Express task manager app with API routing, persistent JSON storage, and a clean frontend interface.',
+    deployUrl: 'https://expert-spoon.onrender.com',
+    gitUrl: 'https://github.com/rich-strain/expert-spoon',
+    tags: ['Node.js', 'Express', 'REST API'],
+  },
+  {
+    title: 'Auth Service',
+    desc: 'A standalone authentication microservice featuring JWT-based auth, OAuth 2.0 social login, refresh token rotation, and role-based access control.',
+    comingSoon: true,
+    tags: ['Node.js', 'JWT', 'OAuth', 'TypeScript'],
+  },
+  {
+    title: 'Stripe Payment API',
+    desc: 'A reusable payment integration layer built on Stripe — supporting subscriptions, one-time charges, webhooks, and customer portal management.',
+    comingSoon: true,
+    tags: ['Node.js', 'Stripe', 'TypeScript', 'Webhooks'],
   },
 ];
 
 function Portfolio() {
   return (
-    <section className="py-28 px-8">
-      <div className="container mx-auto mb-20 text-center">
-        <Typography variant="h2" color="blue-gray" className="mb-4">
-          My Portfolio
-        </Typography>
-        <Typography variant="lead" className="mx-auto w-full px-4 font-normal !text-gray-500 lg:w-6/12">
-          Whether you&apos;re envisioning a new mobile app or looking to revamp your website, I am here to bring your digital ambitions to life.
-        </Typography>
+    <section className="container mx-auto px-6 max-w-6xl py-20">
+      <div className="mb-14">
+        <p className="text-accent text-xs uppercase tracking-widest mb-3 font-medium">My Work</p>
+        <h1 className="section-title mb-3">Projects</h1>
+        <p className="section-subtitle max-w-lg">
+          A selection of projects spanning full-stack web apps, API integrations, and developer tools.
+          More coming as I build in public.
+        </p>
       </div>
-      <div className="container mx-auto grid grid-cols-1 gap-x-10 gap-y-20 md:grid-cols-2 xl:grid-cols-3">
-        {PROJECTS.map((props, idx) => (
-          <Project key={idx} {...props} />
+
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+        {PROJECTS.map((project, idx) => (
+          <Project key={idx} {...project} />
         ))}
       </div>
     </section>

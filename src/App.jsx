@@ -4,14 +4,13 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <>
+    <div className="min-h-screen bg-primary flex flex-col">
       <Navigation />
-      <Outlet />
-      {/* <Header /> */}
-      {/* Container From Material-Tailwind For <Outlet /> */}
-      {/* End Container */}
+      <main className="flex-1">
+        <Outlet />
+      </main>
       <Footer />
-    </>
+    </div>
   );
 }
 

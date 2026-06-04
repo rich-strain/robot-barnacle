@@ -1,27 +1,42 @@
-import { Typography } from '@material-tailwind/react';
-import { DiCss3Full, DiGithubBadge, DiHtml5, DiJavascript, DiMongodb, DiMysql, DiNodejs, DiReact } from 'react-icons/di';
+const SKILL_GROUPS = [
+  {
+    label: 'Frontend',
+    skills: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS'],
+  },
+  {
+    label: 'Backend',
+    skills: ['Node.js', 'Express.js', 'PHP', 'GraphQL', 'REST APIs', 'JWT', 'OAuth'],
+  },
+  {
+    label: 'Database',
+    skills: ['MongoDB', 'SQL', 'MySQL', 'PostgreSQL', 'Mongoose'],
+  },
+  {
+    label: 'Payments & Marketing',
+    skills: ['Stripe', 'Clickbank', 'Clickfunnels'],
+  },
+  {
+    label: 'DevOps & Cloud',
+    skills: ['Docker', 'DigitalOcean', 'Netlify', 'Git', 'GitHub'],
+  },
+];
 
 const Skills = () => {
   return (
-    <section className="px-8 py-28">
-      <div className="container mx-auto text-center">
-        <Typography variant="h5" className="mb-8 text-gray-900">
-          Coding Skills
-        </Typography>
-        <div className="flex flex-wrap items-center justify-center gap-6">
-          <div className="flex items-center gap-2">
-            <DiGithubBadge className="text-gray-700" size="4rem" variant="gradient" />
-            <DiHtml5 variant="gradient" className="text-gray-700" size="4rem" />
-            <DiCss3Full className="text-gray-700" size="4rem" />
-            <DiJavascript className="text-gray-700" size="4rem" />
-            <DiMongodb className="text-gray-700" size="4rem" />
-            <DiMysql className="text-gray-700" size="4rem" />
-            <DiNodejs className="text-gray-700" size="4rem" />
-            <DiReact className="text-gray-700" size="4rem" />
+    <div className="space-y-8">
+      {SKILL_GROUPS.map(({ label, skills }) => (
+        <div key={label}>
+          <h3 className="text-text-muted text-xs uppercase tracking-widest mb-3 font-medium">{label}</h3>
+          <div className="flex flex-wrap gap-2">
+            {skills.map((skill) => (
+              <span key={skill} className="skill-badge">
+                {skill}
+              </span>
+            ))}
           </div>
         </div>
-      </div>
-    </section>
+      ))}
+    </div>
   );
 };
 

@@ -27,10 +27,11 @@ Do not expose API keys on the frontend — use Netlify environment variables
 Keep commits clean and organized
 Resend API key stored as NETLIFY environment variable: RESEND_API_KEY
 
-## Environment
+## Netlify Configuration
 
+- Legacy prerendering has been disabled
+- Using new Netlify prerender extension instead
 - Node.js version: 22
-- .node-version file in root specifies Node version for Netlify
 
 ## Contact
 
