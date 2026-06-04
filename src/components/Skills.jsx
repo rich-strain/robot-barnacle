@@ -5,15 +5,15 @@ const SKILL_GROUPS = [
   },
   {
     label: 'Backend',
-    skills: ['Node.js', 'Express.js', 'PHP', 'GraphQL', 'REST APIs', 'JWT', 'OAuth'],
+    skills: ['Node.js', 'Express.js', 'PHP', 'GraphQL', 'REST APIs'],
   },
   {
     label: 'Database',
     skills: ['MongoDB', 'SQL', 'MySQL', 'PostgreSQL', 'Mongoose'],
   },
   {
-    label: 'Payments & Marketing',
-    skills: ['Stripe', 'Clickbank', 'Clickfunnels'],
+    label: 'Payments & APIs',
+    skills: ['Stripe', 'Clickbank', 'Clickfunnels', 'JWT', 'OAuth', 'Resend'],
   },
   {
     label: 'DevOps & Cloud',

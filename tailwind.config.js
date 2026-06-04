@@ -4,15 +4,19 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#0d1117',
-        surface: '#161b22',
-        elevated: '#1f2937',
+        // All theme colors use CSS variables so light/dark toggling
+        // works automatically without touching component files.
+        // Format: rgb(channels / alpha) to support opacity modifiers like bg-primary/95.
+        primary: 'rgb(var(--color-primary) / <alpha-value>)',
+        surface: 'rgb(var(--color-surface) / <alpha-value>)',
+        elevated: 'rgb(var(--color-elevated) / <alpha-value>)',
+        border: 'rgb(var(--color-border) / <alpha-value>)',
+        'text-primary': 'rgb(var(--color-text-primary) / <alpha-value>)',
+        'text-secondary': 'rgb(var(--color-text-secondary) / <alpha-value>)',
+        'text-muted': 'rgb(var(--color-text-muted) / <alpha-value>)',
+        // Accent stays hardcoded — same in both modes, supports opacity modifiers natively.
         accent: '#6366f1',
         'accent-light': '#818cf8',
-        'text-primary': '#e6edf3',
-        'text-secondary': '#8b949e',
-        'text-muted': '#6e7681',
-        border: '#30363d',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
