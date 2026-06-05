@@ -3,13 +3,13 @@ import Project from '../components/Project';
 const PROJECTS = [
   // Production SaaS
   {
-    img: '/image/wealthen-preview.png',
+    img: '/image/wealthen-preview-1200x600.png',
     title: 'Wealthen',
-    desc: 'A financial wellness SaaS platform with three subscription tiers (Free / $2 / $7 per month). Users import bank CSVs — no account linking ever — and get spending categorization, a debt payoff engine (avalanche & snowball), subscription waste detection, budget alerts, a financial health score, and a net worth tracker. Stripe handles billing; a Premium tier unlocks an AI coach and life planning tools.',
-    deployUrl: 'https://wealthen.richardstrain.com',
+    desc: 'A full-stack financial wellness SaaS built with Next.js 16, Prisma, Stripe, and NextAuth — featuring CSV transaction import, budget tracking, debt payoff engine, and tiered membership with live payment processing.',
+    deployUrl: 'https://wealthen.richardstrain.com/demo',
     gitUrl: '',
     privateRepo: true,
-    tags: ['Next.js', 'TypeScript', 'Stripe', 'Prisma', 'PostgreSQL', 'NextAuth'],
+    tags: ['Next.js', 'TypeScript', 'Stripe', 'Prisma', 'PostgreSQL', 'NextAuth', 'Supabase', 'Node.js', 'Tailwind CSS', 'SaaS'],
   },
   {
     img: '/image/selfreliant-preview-1200x600.png',
@@ -19,19 +19,23 @@ const PROJECTS = [
     gitUrl: '',
     privateRepo: true,
     demoCredentials: { user: 'demo@richardstrain.com', pass: 'demo' },
-    tags: ['React', 'Next.js', 'Payload CMS', 'Docker', 'Clickfunnels', 'Webhooks', 'Node.js', 'TypeScript'],
+    tags: ['React', 'Next.js', 'TypeScript', 'Payload CMS', 'Docker', 'Clickfunnels Payment Event Handling', 'Node.js', 'OAuth', 'SaaS'],
   },
   // Standalone services
   {
+    img: '/image/auth-service-preview-1200x600.png',
     title: 'Auth Service',
     desc: 'A standalone authentication microservice featuring JWT-based auth, OAuth 2.0 social login, refresh token rotation, and role-based access control.',
-    comingSoon: true,
-    tags: ['Node.js', 'JWT', 'OAuth', 'TypeScript'],
+    deployUrl: 'https://auth-service-dy8p.onrender.com/api-docs/',
+    gitUrl: 'https://github.com/rich-strain/auth-service',
+    tags: ['Node.js', 'TypeScript', 'Docker', 'JWT', 'OAuth'],
   },
   {
+    img: '/image/stripe-api-preview-1200x600.png',
     title: 'Stripe Payment API',
     desc: 'A reusable payment integration layer built on Stripe — supporting subscriptions, one-time charges, webhooks, and customer portal management.',
-    comingSoon: true,
+    deployUrl: 'https://stripe-payment-api-eji0.onrender.com/api-docs/',
+    gitUrl: 'https://github.com/rich-strain/stripe-payment-api',
     tags: ['Node.js', 'Stripe', 'TypeScript', 'Webhooks'],
   },
   // Full-stack bootcamp projects
