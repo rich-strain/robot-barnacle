@@ -26,7 +26,7 @@ const PROJECTS = [
     img: '/image/auth-service-preview-1200x600.png',
     title: 'Auth Service',
     desc: 'A standalone authentication microservice featuring JWT-based auth, OAuth 2.0 social login, refresh token rotation, and role-based access control.',
-    deployUrl: 'https://auth-service-dy8p.onrender.com/api-docs/',
+    deployUrl: 'https://auth.richardstrain.com/api-docs/',
     gitUrl: 'https://github.com/rich-strain/auth-service',
     tags: ['Node.js', 'TypeScript', 'Docker', 'JWT', 'OAuth'],
   },
