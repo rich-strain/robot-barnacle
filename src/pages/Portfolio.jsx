@@ -39,18 +39,18 @@ const PROJECTS = [
     img: '/image/xClone.png',
     title: 'X Clone',
     desc: 'A content management style social platform where developers can publish posts and comment on each other — built with MERN stack.',
-    deployUrl: 'https://crispy-dollop.onrender.com',
+    // deployUrl: 'https://crispy-dollop.onrender.com',
     gitUrl: 'https://github.com/rich-strain/crispy-dollop',
     tags: ['React', 'Node.js', 'MongoDB', 'GraphQL'],
   },
-  {
-    img: '/image/travelBlog.png',
-    title: 'Travel Blog',
-    desc: 'A full-stack travel diary built with Express.js and Sequelize ORM backed by a PostgreSQL database with session authentication.',
-    deployUrl: 'https://travel-guide-9oc3.onrender.com',
-    gitUrl: 'https://github.com/rich-strain/travel-guide',
-    tags: ['Node.js', 'Express', 'Sequelize', 'PostgreSQL'],
-  },
+  // {
+  //   img: '/image/travelBlog.png',
+  //   title: 'Travel Blog',
+  //   desc: 'A full-stack travel diary built with Express.js and Sequelize ORM backed by a PostgreSQL database with session authentication.',
+  //   deployUrl: 'https://travel-guide-9oc3.onrender.com',
+  //   gitUrl: 'https://github.com/rich-strain/travel-guide',
+  //   tags: ['Node.js', 'Express', 'Sequelize', 'PostgreSQL'],
+  // },
   {
     img: '/image/mixIt-preview-1200x600.png',
     title: 'Mix-It',
@@ -59,14 +59,14 @@ const PROJECTS = [
     gitUrl: 'https://github.com/rich-strain/cocktail-search',
     tags: ['JavaScript', 'REST API', 'LocalStorage', 'TailwindCSS'],
   },
-  {
-    img: '/image/openWeather.png',
-    title: 'Open Weather',
-    desc: 'A weather dashboard that retrieves current conditions and a five-day forecast based on city search, using the OpenWeather API.',
-    deployUrl: '',
-    gitUrl: 'https://github.com/rich-strain/open-weather',
-    tags: ['JavaScript', 'OpenWeather API', 'LocalStorage'],
-  },
+  // {
+  //   img: '/image/openWeather.png',
+  //   title: 'Open Weather',
+  //   desc: 'A weather dashboard that retrieves current conditions and a five-day forecast based on city search, using the OpenWeather API.',
+  //   deployUrl: '',
+  //   gitUrl: 'https://github.com/rich-strain/open-weather',
+  //   tags: ['JavaScript', 'OpenWeather API', 'LocalStorage'],
+  // },
 ];
 
 function Portfolio() {
