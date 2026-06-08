@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa6';
 import { HiEnvelope, HiPaperAirplane } from 'react-icons/hi2';
 
+const EMAIL = ['richardstrain', 'gmail.com'].join('@');
+
 const SOCIAL_LINKS = [
   {
     label: 'LinkedIn',
@@ -84,13 +86,13 @@ export function Contact() {
           <div className="card">
             <h2 className="text-text-primary font-semibold mb-5">Contact Details</h2>
             <a
-              href="mailto:richardstrain@gmail.com"
+              href={`mailto:${EMAIL}`}
               className="flex items-center gap-3 text-text-secondary hover:text-accent transition-colors group mb-2"
             >
               <div className="w-9 h-9 rounded-lg bg-elevated border border-border flex items-center justify-center group-hover:border-accent/40 transition-colors flex-shrink-0">
                 <HiEnvelope className="w-4 h-4" />
               </div>
-              <span className="text-sm">richardstrain@gmail.com</span>
+              <span className="text-sm">{EMAIL}</span>
             </a>
           </div>
 
