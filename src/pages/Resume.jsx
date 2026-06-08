@@ -15,8 +15,7 @@ const FRONTEND = [
   },
   {
     title: 'Responsive Design',
-    children:
-      'Skilled in building fully responsive layouts using Tailwind CSS, CSS Grid, and Flexbox. Every project I ship is mobile-first by default.',
+    children: 'Skilled in building fully responsive layouts using Tailwind CSS, CSS Grid, and Flexbox. Every project I ship is mobile-first by default.',
   },
 ];
 
@@ -28,8 +27,7 @@ const BACKEND = [
   },
   {
     title: 'MongoDB & SQL',
-    children:
-      'Proficient with MongoDB and Mongoose for NoSQL data modeling, as well as SQL databases including MySQL and PostgreSQL using Sequelize ORM.',
+    children: 'Proficient with MongoDB and Mongoose for NoSQL data modeling, as well as SQL databases including MySQL and PostgreSQL using Sequelize ORM.',
   },
   {
     title: 'Payment Integrations',
@@ -38,8 +36,7 @@ const BACKEND = [
   },
   {
     title: 'GraphQL & Auth',
-    children:
-      'Proficient with GraphQL APIs using Apollo, and experienced implementing JWT-based authentication and OAuth 2.0 social login flows.',
+    children: 'Proficient with GraphQL APIs using Apollo, and experienced implementing JWT-based authentication and OAuth 2.0 social login flows.',
   },
 ];
 
@@ -50,16 +47,12 @@ function Resume() {
         <div>
           <p className="text-accent text-xs uppercase tracking-widest mb-3 font-medium">My Background</p>
           <h1 className="section-title mb-3">Resume & Skills</h1>
-          <p className="section-subtitle max-w-lg">
-            UCF coding bootcamp graduate with 1.5+ years of hands-on full-stack experience.
-          </p>
+          <p className="section-subtitle max-w-lg">UCF coding bootcamp graduate with 1.5+ years of hands-on full-stack experience.</p>
         </div>
         <a
-          href="#"
-          onClick={(e) => e.preventDefault()}
-          title="Resume download coming soon"
-          className="btn-secondary flex-shrink-0 opacity-60 cursor-not-allowed"
-          aria-disabled="true"
+          href="/resume/Richard_Strain_Resume.pdf"
+          download="Richard_Strain_Resume.pdf"
+          className="btn-secondary flex-shrink-0"
         >
           <HiArrowDownTray className="w-4 h-4" />
           Download Resume
@@ -75,9 +68,7 @@ function Resume() {
       {/* Proficiencies */}
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
         <div>
-          <h2 className="text-text-primary font-semibold text-lg mb-5 pb-3 border-b border-border">
-            Frontend Proficiencies
-          </h2>
+          <h2 className="text-text-primary font-semibold text-lg mb-5 pb-3 border-b border-border">Frontend Proficiencies</h2>
           <div className="space-y-4">
             {FRONTEND.map((props, idx) => (
               <ProficiencyCard key={idx} {...props} />
@@ -85,9 +76,7 @@ function Resume() {
           </div>
         </div>
         <div>
-          <h2 className="text-text-primary font-semibold text-lg mb-5 pb-3 border-b border-border">
-            Backend Proficiencies
-          </h2>
+          <h2 className="text-text-primary font-semibold text-lg mb-5 pb-3 border-b border-border">Backend Proficiencies</h2>
           <div className="space-y-4">
             {BACKEND.map((props, idx) => (
               <ProficiencyCard key={idx} {...props} />
