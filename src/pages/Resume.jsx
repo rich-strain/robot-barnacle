@@ -5,8 +5,7 @@ import { HiArrowDownTray } from 'react-icons/hi2';
 const FRONTEND = [
   {
     title: 'React & Next.js',
-    children:
-      'Proficient in building component-driven UIs with React and server-rendered apps with Next.js. Experienced with hooks, context, routing, and performance optimization.',
+    children: 'Experience building component-driven UIs with React and server-rendered apps with Next.js, including hooks, context, and routing.',
   },
   {
     title: 'TypeScript',
@@ -15,7 +14,7 @@ const FRONTEND = [
   },
   {
     title: 'Responsive Design',
-    children: 'Skilled in building fully responsive layouts using Tailwind CSS, CSS Grid, and Flexbox. Every project I ship is mobile-first by default.',
+    children: 'Experience building responsive layouts using Tailwind CSS, CSS Grid, and Flexbox, with a focus on mobile-friendly design.',
   },
 ];
 
@@ -27,7 +26,8 @@ const BACKEND = [
   },
   {
     title: 'MongoDB & SQL',
-    children: 'Proficient with MongoDB and Mongoose for NoSQL data modeling, as well as SQL databases including MySQL and PostgreSQL using Sequelize ORM.',
+    children:
+      'Experience with MongoDB and Mongoose for NoSQL data modeling through production applications, as well as foundational knowledge of SQL databases including MySQL and PostgreSQL with Sequelize and Prisma ORM.',
   },
   {
     title: 'Payment Integrations',
@@ -36,7 +36,8 @@ const BACKEND = [
   },
   {
     title: 'GraphQL & Auth',
-    children: 'Proficient with GraphQL APIs using Apollo, and experienced implementing JWT-based authentication and OAuth 2.0 social login flows.',
+    children:
+      'Familiar with GraphQL APIs using Apollo through bootcamp and project work, and experienced implementing JWT-based authentication and OAuth 2.0 social login flows.',
   },
 ];
 
@@ -49,11 +50,7 @@ function Resume() {
           <h1 className="section-title mb-3">Resume & Skills</h1>
           <p className="section-subtitle max-w-lg">UCF coding bootcamp graduate with 1.5+ years of hands-on full-stack experience.</p>
         </div>
-        <a
-          href="/resume/Richard_Strain_Resume.pdf"
-          download="Richard_Strain_Resume.pdf"
-          className="btn-secondary flex-shrink-0"
-        >
+        <a href="/resume/Richard_Strain_Resume.pdf" download="Richard_Strain_Resume.pdf" className="btn-secondary flex-shrink-0">
           <HiArrowDownTray className="w-4 h-4" />
           Download Resume
         </a>
