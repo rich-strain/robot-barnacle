@@ -45,7 +45,7 @@ const PROJECTS = [
     desc: 'A content management style social platform where developers can publish posts and comment on each other — built with MERN stack.',
     // deployUrl: 'https://crispy-dollop.onrender.com',
     gitUrl: 'https://github.com/rich-strain/crispy-dollop',
-    tags: ['React', 'Node.js', 'MongoDB', 'GraphQL'],
+    tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Mongoose'],
   },
   // {
   //   img: '/image/travelBlog.png',
