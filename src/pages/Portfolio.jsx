@@ -36,7 +36,7 @@ const PROJECTS = [
     desc: 'A reusable payment integration layer built on Stripe — supporting subscriptions, one-time charges, webhooks, and customer portal management.',
     deployUrl: 'https://stripe-payment-api-eji0.onrender.com/api-docs/',
     gitUrl: 'https://github.com/rich-strain/stripe-payment-api',
-    tags: ['Node.js', 'Stripe', 'TypeScript', 'Webhooks'],
+    tags: ['Node.js', 'Express', 'Stripe', 'TypeScript', 'Webhooks'],
   },
   // Full-stack bootcamp projects
   {
