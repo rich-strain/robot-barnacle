@@ -13,7 +13,7 @@ const Home = () => {
           <div className="animate-slide-up">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-medium mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
-              Available for remote opportunities
+              Available onsite on the Treasure Coast, hybrid, or remote
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-text-primary leading-tight tracking-tight mb-6">
@@ -23,9 +23,9 @@ const Home = () => {
             </h1>
 
             <p className="text-text-secondary text-lg leading-relaxed mb-8 max-w-lg">
-              UCF coding bootcamp graduate with 1.5+ years building production-grade MERN stack
-              applications — including a SaaS membership platform with real paying customers and
-              payment integrations.
+              Full-stack developer with 15+ years of professional development experience and 2 years of dedicated MERN stack work — including multiple
+              production SaaS membership platforms and payment integrations across Stripe, Clickbank, and Clickfunnels. I build AI-first, leveraging tools like
+              Claude Code daily to ship faster without sacrificing code quality.
             </p>
 
             <div className="flex flex-wrap gap-3 mb-10">
@@ -65,18 +65,16 @@ const Home = () => {
           <div className="flex items-center justify-center lg:justify-end animate-fade-in">
             <div className="relative">
               <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-full bg-surface border border-border flex items-center justify-center shadow-2xl">
-                <div className="text-8xl sm:text-9xl font-bold text-accent/20 select-none tracking-tighter">
-                  RS
-                </div>
+                <div className="text-8xl sm:text-9xl font-bold text-accent/20 select-none tracking-tighter">RS</div>
               </div>
               <div className="absolute inset-0 rounded-full bg-accent/5 blur-2xl scale-110 -z-10"></div>
               <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-full bg-elevated border border-border flex flex-col items-center justify-center shadow-lg">
-                <span className="text-accent font-bold text-lg leading-none">1.5+</span>
-                <span className="text-text-muted text-xs mt-0.5">yrs exp</span>
+                <span className="text-accent font-bold text-lg leading-none">2yrs</span>
+                <span className="text-text-muted text-xs mt-0.5">MERN exp</span>
               </div>
               <div className="absolute -top-4 -left-4 w-20 h-20 rounded-full bg-elevated border border-border flex flex-col items-center justify-center shadow-lg">
-                <span className="text-accent font-bold text-base leading-none">UCF</span>
-                <span className="text-text-muted text-xs mt-0.5">bootcamp</span>
+                <span className="text-accent font-bold text-base leading-none">AI-First</span>
+                <span className="text-text-muted text-xs mt-0.5">developer</span>
               </div>
             </div>
           </div>
@@ -104,17 +102,19 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
               <p className="text-accent text-xs uppercase tracking-widest mb-3 font-medium">About Me</p>
-              <h2 className="section-title mb-6">Building real things<br />for real users</h2>
+              <h2 className="section-title mb-6">
+                Building real things
+                <br />
+                for real users
+              </h2>
               <p className="text-text-secondary leading-relaxed mb-4">
-                I&apos;m a full-stack developer based along Florida&apos;s Treasure Coast, focused on building
-                production-ready web applications. I graduated from UCF&apos;s coding bootcamp and have since
-                shipped real products — including a SaaS membership platform with Stripe payment integrations
+                I&apos;m a full-stack developer based along Florida&apos;s Treasure Coast, focused on building production-ready web applications. I graduated
+                from UCF&apos;s coding bootcamp and have since shipped real products — including a SaaS membership platform with Stripe payment integrations
                 that serves paying customers.
               </p>
               <p className="text-text-secondary leading-relaxed mb-8">
-                My stack centers on the MERN ecosystem, but I&apos;m equally comfortable with Next.js, TypeScript,
-                Docker, and third-party API integrations. I care about clean code, user experience, and shipping
-                things that actually work.
+                My stack centers on the MERN ecosystem, but I&apos;m equally comfortable with Next.js, TypeScript, Docker, and third-party API integrations. I
+                care deeply about code quality, user experience, and shipping software that has high value, excellent reliability, and is performance optimized.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link to="/portfolio" className="btn-primary">
