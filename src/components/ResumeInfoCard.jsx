@@ -14,7 +14,7 @@ export function ResumeInfoCard({ icon: Icon, title }) {
           <Icon className="h-5 w-5" strokeWidth={2} />
         </IconButton>
       </CardHeader>
-      <CardBody className="grid justify-start !px-3.5 pt-2">{/* <Typography className=" font-normal !text-gray-500">{children}</Typography> */}</CardBody>
+      <CardBody className="grid justify-start !px-3.5 pt-2"></CardBody>
     </Card>
   );
 }
@@ -22,7 +22,6 @@ export function ResumeInfoCard({ icon: Icon, title }) {
 ResumeInfoCard.propTypes = {
   icon: PropTypes.elementType.isRequired,
   title: PropTypes.string.isRequired,
-  //children: PropTypes.node.isRequired,
 };
 
 export default ResumeInfoCard;
