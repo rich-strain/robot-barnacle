@@ -1,6 +1,15 @@
 import Project from '../components/Project';
 
 const PROJECTS = [
+  // Data / ML
+  {
+    img: '/image/datapipeline-performance-preview.png',
+    title: 'Clinical Data Pipeline',
+    desc: 'End-to-end pipeline processing synthetic messy EHR records through unit conversion, normalization, and feature engineering before training a scikit-learn classifier to predict diagnosis categories, with a Streamlit UI to visualize model performance.',
+    deployUrl: 'https://clinflow-data-pipeline.streamlit.app/',
+    gitUrl: 'https://github.com/rich-strain/clinflow-data-pipeline',
+    tags: ['Python', 'scikit-learn', 'pandas', 'Streamlit', 'Plotly'],
+  },
   // Production SaaS
   {
     img: '/image/wealthen-preview-1200x600.png',
@@ -14,7 +23,7 @@ const PROJECTS = [
   {
     img: '/image/selfreliant-preview-1200x600.png',
     title: 'SaaS Membership Platform',
-    desc: 'A production SaaS membership platform built for a live business with real paying customers. Features tiered membership access controlled by Clickfunnels payment webhooks, a Payload CMS backend running in Docker, a Next.js API layer, and a React frontend. Handles webhook verification, membership permission gates, and customer management. Deployed and actively serving customers.',
+    desc: "A production SaaS membership platform built for a client's business. Handles tiered access gated by payment webhooks, role-based permission gates, and customer management.",
     deployUrl: 'https://members.selfreliantusa.com',
     gitUrl: '',
     privateRepo: true,
@@ -23,14 +32,6 @@ const PROJECTS = [
   },
   // Standalone services
   {
-    img: '/image/auth-service-preview-1200x600.png',
-    title: 'Auth Service',
-    desc: 'A standalone authentication microservice featuring JWT-based auth, OAuth 2.0 social login, refresh token rotation, and role-based access control.',
-    deployUrl: 'https://auth.richardstrain.com/api-docs/',
-    gitUrl: 'https://github.com/rich-strain/auth-service',
-    tags: ['Node.js', 'TypeScript', 'Docker', 'JWT', 'OAuth'],
-  },
-  {
     img: '/image/stripe-api-preview-1200x600.png',
     title: 'Stripe Payment API',
     desc: 'A reusable payment integration layer built on Stripe — supporting subscriptions, one-time charges, webhooks, and customer portal management.',
@@ -38,14 +39,15 @@ const PROJECTS = [
     gitUrl: 'https://github.com/rich-strain/stripe-payment-api',
     tags: ['Node.js', 'Express', 'Stripe', 'TypeScript', 'Webhooks'],
   },
-  // Full-stack bootcamp projects
   {
-    img: '/image/xClone.png',
-    title: 'X Clone',
-    desc: 'A content management style social platform where developers can publish posts and comment on each other — built with MERN stack.',
-    gitUrl: 'https://github.com/rich-strain/crispy-dollop',
-    tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Mongoose'],
+    img: '/image/auth-service-preview-1200x600.png',
+    title: 'Auth Service',
+    desc: 'A standalone authentication microservice featuring JWT-based auth, OAuth 2.0 social login, refresh token rotation, and role-based access control.',
+    deployUrl: 'https://auth.richardstrain.com/api-docs/',
+    gitUrl: 'https://github.com/rich-strain/auth-service',
+    tags: ['Node.js', 'TypeScript', 'Docker', 'JWT', 'OAuth'],
   },
+  // Full-stack bootcamp projects
   {
     img: '/image/mixIt-preview-1200x600.png',
     title: 'Mix-It',
@@ -63,7 +65,7 @@ function Portfolio() {
         <p className="text-accent text-xs uppercase tracking-widest mb-3 font-medium">My Work</p>
         <h1 className="section-title mb-3">Projects</h1>
         <p className="section-subtitle max-w-lg">
-          A selection of projects spanning full-stack web apps, API integrations, and developer tools. More coming as I build in public.
+          A selection of projects spanning full-stack web apps, data pipelines, API integrations, and developer tools.
         </p>
       </div>
 
