@@ -48,7 +48,7 @@ function Resume() {
         <div>
           <p className="text-accent text-xs uppercase tracking-widest mb-3 font-medium">My Background</p>
           <h1 className="section-title mb-3">Resume & Skills</h1>
-          <p className="section-subtitle max-w-lg">UCF coding bootcamp graduate with 1.5+ years of hands-on full-stack experience.</p>
+          <p className="section-subtitle max-w-lg">Full-stack developer with 15+ years of experience in PHP, APIs, and payment integrations — plus nearly 2 years of dedicated MERN stack and TypeScript development.</p>
         </div>
         <a href="/resume/Richard_Strain_Resume.pdf" download="Richard_Strain_Resume.pdf" className="btn-secondary flex-shrink-0">
           <HiArrowDownTray className="w-4 h-4" />
